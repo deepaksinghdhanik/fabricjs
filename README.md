@@ -164,6 +164,12 @@ js
 
 Notice fabric.util.ease.easeOutBounce as an easing option. Other notable ones include easeInCubic, easeOutCubic, easeInElastic, easeOutElastic, easeInBounce, and easeOutExpo.
 
+- requestAnimationFrame
+- canvas.renderAll.bind(canvas)
+- fabric.util.ease
+- fabric.util.ease.easeOutBounce
+- easeInCubic, easeOutCubic, easeInElastic, easeOutElastic, easeInBounce, and easeOutExpo.
+
 ## Image Filter
 
     fabric.Image.fromURL('pug.jpg', function(img) {
@@ -178,10 +184,37 @@ Notice fabric.util.ease.easeOutBounce as an easing option. Other notable ones in
       canvas.add(img);
     });
     
+## Colors and conversion
+
+    new fabric.Color('#f55').toRgb(); // "rgb(255,85,85)"
+    new fabric.Color('rgb(100,100,100)').toHex(); // "646464"
+    new fabric.Color('fff').toHex(); // "FFFFFF"
 
 
+## Mixs color
 
+    var redish = new fabric.Color('#f55');
+    var greenish = new fabric.Color('#5f5');
+    
+    redish.overlayWith(greenish).toHex(); // "AAAA55"
+    redish.toGrayscale().toHex(); // "A1A1A1"
 
+## Gradients
+
+    circle.setGradient('fill', {
+      x1: -circle.width / 2,
+      y1: 0,
+      x2: circle.width / 2,
+      y2: 0,
+      colorStops: {
+        0: "red",
+        0.2: "orange",
+        0.4: "yellow",
+        0.6: "green",
+        0.8: "blue",
+        1: "purple"
+      }
+    });
 
 
 
