@@ -1,6 +1,6 @@
 # What is fabric js.
-- Fabric.js — a powerful Javascript library that makes working with HTML5 canvas a breeze
-- Fabric provides simple but powerful object model on top of native methods. It takes care of canvas state and rendering, and lets us work with “objects” directly.
+- Fabric.js is a powerful Javascript library that makes working with HTML5 canvas a breeze
+- Fabric provides simple but powerful object model on top of native methods. It takes care of canvas state and rendering, and lets us work with objects directly.
 
 ## rectangle with canvas 
     // reference canvas element (with id="c")
@@ -119,7 +119,7 @@
     
 ##Images
 
-###Speaking of images…  
+###Speaking of images  
 html
     <canvas id="c"></canvas>
     <img src="my_image.png" id="my-image">
